@@ -92,6 +92,30 @@
           print(c)
           
 10.	    Write a java program to check whether two strings are anagram or not?
+      
+         val str1="karun"
+         val str2="arun"
+
+         val s1 = str1.replace("\\s", "");
+         val s2 = str2.replace("\\s", "");
+
+         var status = true;
+             if(s1.length != s2.length)
+                 status = false;
+             else
+             {
+                 val arr1 = s1.toLowerCase().toCharArray();
+                 val arr2 = s2.toLowerCase().toCharArray();
+                 Arrays.sort(arr1);
+                 Arrays.sort(arr2);
+                 status = Arrays.equals(arr1, arr1);
+             }
+
+          if(status)
+                 System.out.println(s1+" and "+s2+" are anagrams");
+             else
+                 System.out.println(s1+" and "+s2+" are not anagrams");
+
 
 
 12.     Write a Java program to find first non repeated character in a string.
