@@ -5,16 +5,95 @@
                               
  ## String only program
 1.     How do you count the number of occurrences of each character in a string?
+        
+          val str="karun kumar"
+          val ch=str.toCharArray()
+          val map=HashMap<Char,Int>()
+
+          for(i in ch){
+             if(map.containsKey(i)){
+             map.put(i, map[i]!! +1)
+            }else map.put(i,1)
+           }
+          map.forEach { k, v -> println(" Key: $k --  Values: $v")}
+
 2.	   How do you remove all white spaces from a string in java?
-3.	   How do you find duplicate characters in a string? 
-4.     Write a java program to reverse a string?
-5.	   Write a Java program to reverse a String without using reverse() function.
+       
+        val str="karun kumar Singh"
+         for(i in 0..str.length-1){
+          if(str[i] !=' '){
+             print(str[i])
+          }
+        }
+
+
+3.	   How do you covert to string to array? 
+      
+         * val str="This is Ram"
+          val sb=str.split(" ")
+          for (i in 0..sb.size-1){
+          println(sb[i])
+          }
+
+4.     Write a java program to reverse a string and without using reverse()?
+            
+        * val str="karun"
+          for(i in str.length-1 downTo 0){
+          print(str[i])
+          }
+        * val sb=StringBuilder(str)
+          print(sb.reverse())
+
+5.	   Write a java program to count word a string?  
+
+       var count=1
+       val str="This is Mohan"
+       for (i in 0.. str.length-1) {
+         if(str[i]==' ')
+          count++
+        }
+       println("Total Words:"+ count)
+
+
 6.	   Write a Java program to find the length of a String without using inbuilt functions.
-7.	   Write a Java program to check  if given strings are Isomorphic.
-8.	   Write a Java program to find first non repeated character in a string.
-9.	   Write a java program to count word a string?         
-10.	    Write a program to check if a String is a palindrome in Java? 
-11.	    Write a java program to check whether two strings are anagram or not?
-12.	    How do you convert string to integer and integer to string in java?
-13.	    Write a code to prove that strings are immutable or final in java?
-14.	    Write a java program to reverse each word of a given string?
+        var count=0
+        val str="This is Ram"
+        for (i in str.toCharArray()) {
+          count++
+        } 
+        println(count)
+
+7.	    Write a java program to reverse each word of a given string?
+         val str="This is Mohan"
+         val s=str.split(' ')
+         for (i in s.size-1 downTo 0) {
+           print(" " +s[i])
+         }   
+         
+         output-> Mohan is This
+         
+
+8.	    Write a program to check if a String is a palindrome in Java? 
+      
+        val str="madam"
+        var rev=""
+         for (i in str.length-1 downTo 0) {
+            rev+=str[i]
+         }
+         if(str==rev){
+             println("this is a palindrome : "+str)
+         } else  println("this is Not palindrome :"+str)
+
+9.	     How do you convert string to integer and integer to string in java?
+       
+        * val str:String="12"
+          val a:Int=34
+          val c:Int=a+Integer.parseInt(str)
+          print(c)
+          
+10.	    Write a java program to check whether two strings are anagram or not?
+
+
+12.     Write a Java program to find first non repeated character in a string.
+   
+13.     Write a Java program to check  if given strings are Isomorphic.
